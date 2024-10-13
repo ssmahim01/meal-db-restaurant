@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasty Hut</title>
+
+    <!-- Daisy UI with Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                sharedBtn: 'rgb(255, 193, 7)',
+                footer: 'rgba(255, 193, 7, 0.05)',
+              }
+            }
+          }
+        }
+      </script>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/688e7a57b2.js" crossorigin="anonymous"></script>
+
+    <!-- Link of CSS -->
+     <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <!-- Navbar Start -->
+         <nav class="w-4/5 mx-auto flex justify-between items-center py-7">
+            <div>
+                <img class="w-full" src="assets/Tasty_HUT.png" alt="Heading Nav">
+            </div>
+
+            <div>
+                <button class="btn bg-sharedBtn px-6 font-bold border-none">Sign Up</button>
+            </div>
+         </nav>
+
+         <!-- Banner Part Start -->
+          <div class="sm:w-full w-11/12 mx-auto rounded-t-xl rounded-b-xl banner">
+            <div class="sm:w-3/4 w-11/12 mx-auto flex flex-col justify-center text-white items-center gap-5 py-32">
+                <h1 class="sm:text-6xl text-3xl font-extrabold text-center">Taste Our Delicious <br>
+                Best Foods</h1>
+                <p class="lg:w-3/5 w-11/12 sm:text-lg text-center font-medium">There are many foods is available.You want to taste our best foods,Our foods has quality as customers choice.</p>
+
+                <div class="flex relative">
+                    <label class="input input-bordered flex items-center gap-2">
+                        <input type="text" class="grow text-gray-500 font-medium lg:w-[630px] md:w-96 w-60" placeholder="Search any Food" />
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 16 16"
+                          fill="currentColor"
+                          class="h-4 w-4 opacity-70">
+                          <path
+                            fill-rule="evenodd"
+                            d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                            clip-rule="evenodd" />
+                        </svg>
+                      </label>
+
+                      <div class="absolute lg:left-[620px] md:left-[400px] left-3/4">
+                        <button id="btn-search" class="btn bg-sharedBtn px-6 font-bold border-none">Search</button>
+                      </div>
+                </div>
+            </div>
+          </div>
+    </header>
+
+    <main>
+        <!--  -->
+    </main>
+
+    <!-- Footer Start -->
+    <footer class="mt-20 bg-footer">
+        <div class="sm:w-4/5 w-11/12 mx-auto flex flex-row flex-wrap justify-between items-center py-16 sm:gap-0 gap-6 sm:space-x-0 space-x-6">
+                <nav>
+                    <h6 class="text-2xl text-gray-700 font-bold">Section</h6>
+                    <div class="flex flex-col gap-4 mt-4">
+                        <a class="link link-hover text-lg text-gray-600 font-medium">Home</a>
+                        <a class="link link-hover text-lg text-gray-600 font-medium">Features</a>
+                        <a class="link link-hover text-lg text-gray-600 font-medium">Pricing</a>
+                        <a class="link link-hover text-lg text-gray-600 font-medium">FAQs</a>
+                        <a class="link link-hover text-lg text-gray-600 font-medium">About</a>
+                    </div>
+                  </nav>
+    
+                <nav class="sm:mb-9 mb-7">
+                    <h6 class="text-2xl text-gray-700 font-bold">Section</h6>
+                    <div class="flex flex-col gap-4 mt-4">
+                        <a class="link link-hover text-lg text-gray-600 font-medium">UI/UX Design</a>
+                        <a class="link link-hover text-lg text-gray-600 font-medium">Product Design</a>
+                        <a class="link link-hover text-lg text-gray-600 font-medium">Back End Developer</a>
+                        <a class="link link-hover text-lg text-gray-600 font-medium">Front End Developer</a>
+                    </div>
+                  </nav>
+    
+                <nav class="sm:mb-9">
+                    <h6 class="text-2xl text-gray-700 font-bold">Resource</h6>
+                    <div class="flex flex-col gap-4 mt-4">
+                        <a class="link link-hover text-lg text-gray-600 font-medium">FAQ</a>
+                        <a class="link link-hover text-lg text-gray-600 font-medium">Support</a>
+                        <a class="link link-hover text-lg text-gray-600 font-medium">Privacy Policy</a>
+                        <a class="link link-hover text-lg text-gray-600 font-medium">Terms Of Service</a>
+                    </div>
+                  </nav>
+                
+                  <form class="lg:w-2/5 w-full space-y-4 lg:mb-12 mt-5">
+                    <h6 class="text-2xl text-gray-700 font-bold">Subscribe to Our Newsletter</h6>
+    
+                    <p class="lg:w-full w-11/12 text-gray-500 font-medium">It's a footer part.In here, you can view many kinds of links.These links are provide content of our Services, Resources and last you would like to subscribe through your email address</p>
+    
+                    <fieldset class="form-control w-80">
+                      
+                      <div class="flex justify-center items-center">
+                        <input
+                          type="email"
+                          placeholder="Email Address"
+                          class="input input-bordered sm:w-80 w-full" required/>
+                        <button class="btn bg-sharedBtn ml-3 sm:px-7 px-5 border-none font-bold" type="submit">Subscribe</button>
+                      </div>
+                    </fieldset>
+                  </form>
+            </div>
+      </footer>
+
+    <!-- Connect JS file -->
+     <script src="index.js"></script>
+</body>
+</html>

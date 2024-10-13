@@ -1,0 +1,10 @@
+/* Background Image of Banner */
+
+.banner{
+    background-image: url('assets/banner.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(16, 15, 15, 0.7);
+    background-blend-mode: overlay;
+}
