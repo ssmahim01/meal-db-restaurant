@@ -23,7 +23,7 @@ const displayAllFoods = (categories) => {
               <div class="sm:w-2/5 w-full h-80">
                 <img class="w-full h-full rounded-2xl" src='${category.strCategoryThumb}'/>
               </div>
-              <div class="sm:w-1/2 w-11/12">
+              <div class="sm:w-1/2 w-11/12 py-4">
                 <h3 class="text-2xl text-gray-700 font-bold mb-5">${category.strCategory}</h3>
                 <p class="text-lg text-gray-500 font-medium mb-5">There are many variations of passages of available, but the majority have suffered</p>
 
