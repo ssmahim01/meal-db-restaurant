@@ -15,8 +15,12 @@ const getAllFoods = async () => {
 
 const displayAllFoods = (categories) => {
     const cardsParent = document.getElementById('food-cards');
+    const loader = document.querySelector('#loading-ring');
+    loader.classList.remove('hidden');
 
-    categories.forEach(category => {
+    setTimeout(() => {
+      loader.classList.add('hidden');
+      categories.forEach(category => {
         const newElement = document.createElement('div');
         newElement.innerHTML = `
         <div class="flex sm:flex-row flex-col border rounded-lg items-center gap-10">
@@ -27,13 +31,34 @@ const displayAllFoods = (categories) => {
                 <h3 class="text-2xl text-gray-700 font-bold mb-5">${category.strCategory}</h3>
                 <p class="text-lg text-gray-500 font-medium mb-5">There are many variations of passages of available, but the majority have suffered</p>
 
-                <a><button onclick="getDetails('${category}')" class="text-lg font-semibold text-sharedBtn bg-transparent underline">View Details</button></a>
+                <a><button onclick="getDetails('${category.idCategory}')" class="text-lg font-semibold text-sharedBtn bg-transparent underline">View Details</button></a>
               </div>
             </div>
         `
         cardsParent.appendChild(newElement);
     });
+    }, 3000);
 };
+
+/* Get Details */
+
+const getDetails = async (id) => {
+  const res = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=5277${id}`);
+  const data = await res.json();
+  displayDetails(data.meals);
+};
+
+/* Display Details */
+
+const displayDetails = (meals) => {
+  
+}
+
+/* Get Items By Search */
+
+
+
+/* Show All Cards */
 
 const showAllCards = async () => {
     const response = await fetch(fetchUrl);
