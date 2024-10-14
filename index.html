@@ -52,7 +52,7 @@
 
                 <div class="flex relative">
                     <label class="input input-bordered flex items-center gap-2">
-                        <input type="text" class="grow text-gray-500 font-medium lg:w-[630px] md:w-96 w-60" placeholder="Search any Food" />
+                        <input id="searchInput" type="text" class="grow text-gray-500 font-medium lg:w-[630px] md:w-96 w-60" placeholder="Search any Food" />
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 16 16"
@@ -88,15 +88,14 @@
            </div>
 
            <!-- Modal -->
-          <button class="btn" onclick="my_modal_5.showModal()">open modal</button>
-          <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
-            <div class="modal-box" id="modal-details">
-              
+          <dialog id="mealModal" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+              <div id="modal-details">
 
-              </div>
+              </div> 
               <div class="modal-action">
                 <form method="dialog">
-                  <button class="btn">Close</button>
+                  <button class="btn btn-error px-6 text-white font-bold">Close</button>
                 </form>
               </div>
             </div>
