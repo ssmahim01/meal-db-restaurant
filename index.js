@@ -107,14 +107,14 @@ const showAllCards = async () => {
 const getSearchFoodsByName = async (search) => {
   const res = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`);
   const data = await res.json();
-  console.log(data.meals);
+  // console.log(data.meals);
   displayAllFoods(data.meals);
 };
 
 const getSearchFoodsByFirstLetter = async (search) => {
   const res = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?f=${search}`);
   const data = await res.json();
-  console.log(data.meals);
+  // console.log(data.meals);
   displayAllFoods(data.meals);
 };
 
